@@ -9,8 +9,8 @@ CORS(app)
 def dashboard():
     data = {'today_tds': int(np.random.randint(1000)),
         'today_usage': int(np.random.randint(1000)),
-        'tds_history': [int(tmp) for tmp in np.random.randint(1000, size=30)],
-        'usage_history': [int(tmp) for tmp in np.random.randint(1000, size=30)]}
+        'tds_history': [int(tmp) for tmp in np.random.randint(1000, size=7)],
+        'usage_history': [int(tmp) for tmp in np.random.randint(1000, size=7)]}
     return jsonify(data)
 
 @app.route('/map', methods=['GET'])
