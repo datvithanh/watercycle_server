@@ -3,22 +3,22 @@
     {
       "long": 21.011038, 
       "lat": 105.811066, 
-      "label": 1
+      "label": "normal"
     }, 
     {
       "long": 21.011038, 
       "lat": 105.817282, 
-      "label": 1
+      "label": "normal"
     }, 
     {
       "long": 21.005066, 
       "lat": 105.805056, 
-      "label": 1
+      "label": "alert"
     }, 
     {
       "long": 21.018599, 
       "lat": 105.829246, 
-      "label": 1
+      "label": "danger"
     }
   ]
 }

@@ -17,7 +17,6 @@ def dashboard():
 def map():
     import json
     data = json.load(open('map_data.json', 'r'))
-
     return jsonify(data)
 
 @app.route('/tds', methods=['POST'])
