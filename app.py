@@ -7,10 +7,13 @@ CORS(app)
 
 @app.route('/dashboard', methods=['GET'])
 def dashboard():
-    data = {'today_tds': int(np.random.randint(1000)),
-        'today_usage': int(np.random.randint(1000)),
-        'tds_history': [int(tmp) for tmp in np.random.randint(1000, size=7)],
-        'usage_history': [int(tmp) for tmp in np.random.randint(1000, size=7)]}
+    tds = [float(tmp) for tmp in open('tds.txt', 'r').readlines()[-7:]]
+    usage = [float(tmp) for tmp in open('usage.txt', 'r').readlines()[-7:]]
+    data = {'today_tds': tds[-1],
+        'today_usage': usage[-1],
+        'tds_history': tds,
+        'usage_history': usage}
+
     return jsonify(data)
 
 @app.route('/map', methods=['GET'])
